@@ -14,9 +14,12 @@ public class DatabaseApplication {
 
 		IStudentRepository bean = context.getBean(IStudentRepository.class);
 
-		Student student=new Student(null,"gurkan","altintas",5181L,23L);
+		Student student=new Student(null,"go","altintas",5181L,23L);
 
 		Student save=bean.save(student);
+
+		Student student1= bean.findByName("go");
+		System.out.println(student1);
 	}
 
 }
